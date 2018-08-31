@@ -60,7 +60,7 @@ html, body {
 body {
 	color:#666;
 	background-color:#fff;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:Roboto,'Open Sans',Arial,Helvetica,sans-serif;
 	-webkit-font-smoothing: antialiased;
 
 	font-size:16px; line-height:1.5;
