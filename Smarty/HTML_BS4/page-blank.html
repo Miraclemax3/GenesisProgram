@@ -23,6 +23,9 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+        
+    
+        
 	</head>
 
 	<!--
@@ -155,7 +158,7 @@
 						<!-- /BUTTONS -->
 
 						<!-- Logo -->
-						<a class="logo float-left" href="http://127.0.0.1:61887/Smarty/HTML_BS4/index-thematics-construction.html#">
+						<a class="logo float-left" href="http:/Smarty/HTML_BS4/index-thematics-construction.html#">
 							<img src="assets/images/_smarty/R2.png" height="400" width="300" alt="" />
 						</a>
 
@@ -201,19 +204,19 @@
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
 									<li class="active"><!-- HOME -->
                                         
-										<a href="http://127.0.0.1:61887/Smarty/HTML_BS4/index-thematics-construction.html#">
+										<a href="http:/Smarty/HTML_BS4/index-thematics-construction.html#">
 											HOME
                                         </a>
 									</li>
 									<li><!-- SERVICES -->
-										<a href="http://127.0.0.1:61887/Smarty/HTML_BS4/index-thematics-construction.html#services">
+										<a href="http:/Smarty/HTML_BS4/index-thematics-construction.html#services">
                                     
                                            
 											SERVICES
 										</a>
 									</li>
 									<li><!-- PORTFOLIO -->
-										<a href="http://127.0.0.1:61887/Smarty/HTML_BS4/index-thematics-construction.html#portfolio">
+										<a href="http:/Smarty/HTML_BS4/index-thematics-construction.html#portfolio">
 											PORTFOLIO
 										</a>
 									</li>
@@ -223,12 +226,12 @@
 										</a>
 									</li>
 									<li><!-- CLIENTS -->
-										<a href="http://127.0.0.1:61887/Smarty/HTML_BS4/index-thematics-construction.html#ourclients">
+										<a href="http:/Smarty/HTML_BS4/index-thematics-construction.html#ourclients">
 											OUR CLIENTS
 										</a>
 									</li>
 									<li><!-- CONTACT -->
-										<a href="http://127.0.0.1:61887/Smarty/HTML_BS4/index-thematics-construction.html#contact">
+										<a href="http:/Smarty/HTML_BS4/index-thematics-construction.html#contact">
 											CONTACT
 										</a>
 									</li>
@@ -312,10 +315,10 @@
 
 					<div class="text-center">
 						<ul class="nav nav-pills mix-filter mb-60">
-							<li data-filter="residential" class="filter "><a href="#">Residential</a></li>
-							<li data-filter="commercial" class="filter"><a href="#">Commercial</a></li>
-							<li data-filter="corporate" class="filter"><a href="#">Corporate</a></li>
-							<li data-filter="hybrid" class="filter"><a href="#">Hybrid</a></li>
+							<li data-filter="residential" class="filter" onclick="displayChoice()"><a href="#">Residential</a></li>
+							<li data-filter="commercial" class="filter" onclick="displayChoice()"><a href="#">Commercial</a></li>
+							<li data-filter="corporate" class="filter" onclick="displayChoice()"><a href="#">Corporate</a></li>
+							<li data-filter="hybrid" class="filter" onclick="displayChoice()"><a href="#">Hybrid</a></li>
 						</ul>
 					</div>
 
@@ -372,123 +375,184 @@
                                     
 
 
-									<div class="row mix-grid">
-                                	<div class="col-md-3 col-sm-3 mix residential">
+									<div class="row mix-grid" id="choice" style="display:none">
+                                	<div class="col-md-12 mix residential">
+                                    
+                                        <div class="row">
+                                        <div class="col-md-3" oninput="shaftRes()">
 												<label for="contact:name">Number of appartments *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
-											</div>
-                                           <div class="col-md-3 col-sm-3 mix residential">
+												<input required type="number" value="" class="form-control" name="" id="appartmentResidential">
+                                    </div>
+											
+                                           <div class="col-md-3" oninput="shaftRes()">
 												<label for="contact:name">Number of floors *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+												<input required type="number" value="" class="form-control" name="" id="floorResidential">
 											</div>
-											<div class="col-md-3 col-sm-3 mix residential">
+											<div class="col-md-3 ">
 												<label for="contact:email">Number of basements *</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+												<input required type="number" value="" class="form-control" name="" id="basementResidential">
 											</div>
+                                        </div>
+                                                   <form>
+                                                    <input type="radio" onclick="resStandard()" name="range" value="Standard" > Standard--> 7 565$<br>
+                                                    
+                                                    <input type="radio"  onclick="resPremium()" name="range" value="Premium"> Premium--> 12 345$<br>
+                                            
+                                                    <input type="radio"  onclick="resExcelium()" name="range" value="Excelium"> Excelium--> 15 400$
+                                                    </form>
+                                        </div>
+                                        
+
 
 									
                                         
-									
-											<div class="col-md-3 col-sm-3 mix commercial">
+									<div class="col-md-12 mix commercial">
+                                        <div class="row">
+											<div class="col-md-3">
 												<label for="contact:subject">How many distinct stores *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="storeCommercial">
 											</div>
                                     
-											<div class="col-md-3 col-sm-3 mix commercial">
+											<div class="col-md-3">
 												<label for="contact:subject">How many floors *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="floorCommercial">
 											</div>
                     				
-											<div class="col-md-3 col-sm-3 mix commercial">
+											<div class="col-md-3">
 												<label for="contact:subject">How many basements *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="basementCommercial">
 											</div>
                                    
-											<div class="col-md-3 col-sm-3 mix commercial">
+											<div class="col-md-3">
 												<label for="contact:subject">How many parking spots available *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="parkingCommercial">
 											</div>
                                 
-											<div class="col-md-3 col-sm-3 mix commercial">
-												<label for="contact:subject">How many elevators cab to build *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											<div class="col-md-3 " oninput="commercialShaft()" >
+												<label for="shaftCommercial">How many elevators shafts to build *</label>
+												<input required type="number" value="" class="form-control" name="" id="shaftCommercial">
 											</div>
-                                        
+                                        </div>
+                                                     <form>
+                                                    <input type="radio"  onclick="comStandard()" name="range" value="Standard" > Standard--> 7 565$<br>
+                                                    
+                                                    <input type="radio"  onclick="comPremium()" name="range" value="Premium"> Premium--> 12 345$<br>
+                                            
+                                                    <input type="radio"  onclick="comExcelium()" name="range" value="Excelium"> Excelium--> 15 400$
+                                                    </form>
+                                        </div>
+
 								
 
 									
 									
-                                            <div class="col-md-3 col-sm-3 mix corporate">
+                                            <div class="col-md-12 mix corporate">
+                                                <div class="row">
+                                                <div class="col-md-3">
 												<label for="contact:subject">How many renting business *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
-											</div>
+												<input required type="number" value="" class="form-control" name="" id="businessCorporate">
+                                        </div>
+                                                
+											
                                   
-                                            <div class="col-md-3 col-sm-3 mix corporate">
+                                            <div class="col-md-3" oninput="shaftCorp()">
 												<label for="contact:subject">How many floors *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="floorCorporate">
 											</div>
                             		
-                                            <div class="col-md-3 col-sm-3 mix corporate">
+                                            <div class="col-md-3" oninput="shaftCorp()">
 												<label for="contact:subject">How many basements *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="basementCorporate">
 											</div>
                                    
-                                            <div class="col-md-3 col-sm-3 mix corporate">
+                                            <div class="col-md-3">
 												<label for="contact:subject">How many parking spots available *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="parkingCorporate">
 											</div>
                                 	
-                                            <div class="col-md-3 col-sm-3 mix corporate">
+                                            <div class="col-md-3" oninput="shaftCorp()">
 												<label for="contact:subject">how many occupants maximum per floor*</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="occupantsCorporate">
 											</div>
+                                                </div>
+                                                    <form>
+                                                    <input type="radio"  onclick="corpStandard()" name="range" value="Standard" > Standard--> 7 565$<br>
+                                                    
+                                                    <input type="radio"  onclick="corpPremium()" name="range" value="Premium"> Premium--> 12 345$<br>
+                                            
+                                                    <input type="radio"  onclick="corpExcelium()" name="range" value="Excelium"> Excelium--> 15 400$
+                                                    </form>
+                                        </div>
+                              
+                                        
+
                                    
                                         
 
                                 	
-                                            <div class="col-md-3 col-sm-3 mix hybrid">
+                                            <div class="col-md-12 mix hybrid">
+                                                <div class="row">
+                                                <div class="col-md-3">
 												<label for="contact:subject">How many distinct business *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
-											</div>
+												<input required type="number" value="" class="form-control" name="" id="businessHybrid">
+                                                    </div>
+											
 									
-                                            <div class="col-md-3 col-sm-3 mix hybrid">
+                                            <div class="col-md-3  mix hybrid" oninput="shaftHybrid()">
 												<label for="contact:subject">How many floors *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="floorHybrid">
 											</div>
                                        
-                                            <div class="col-md-3 col-sm-3 mix hybrid">
+                                            <div class="col-md-3 mix hybrid" oninput="shaftHybrid()">
 												<label for="contact:subject">How many basements *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="basementHybrid">
 											</div>
                             		
-                                            <div class="col-md-3 col-sm-3 mix hybrid">
+                                            <div class="col-md-3  mix hybrid">
 												<label for="contact:subject">How many parking spots available *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="parkingHybrid">
 											</div>
                                   
-                                            <div class="col-md-3 col-sm-3 mix hybrid">
+                                            <div class="col-md-3  mix hybrid" oninput="shaftHybrid()">
 												<label for="contact:subject">How many occupants maximum per floor *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="occupantsHybrid">
 											</div>
                                 	
-                                            <div class="col-md-3 col-sm-3 mix hybrid">
+                                            <div class="col-md-3 mix hybrid">
 												<label for="contact:subject">Business hours (24h Max) *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+												<input required type="number" value="" class="form-control" name="" id="businessHoursHybrid">
 											</div>
+                                                
+                                                </div>
+                                                   <form>
+                                                    <input type="radio"  onclick="hybridStandard()" name="range" value="Standard" > Standard--> 7 565$<br>
+                                                    
+                                                    <input type="radio"  onclick="hybridPremium()" name="range" value="Premium"> Premium--> 12 345$<br>
+                                            
+                                                    <input type="radio"  onclick="hybridExcelium()" name="range" value="Excelium"> Excelium--> 15 400$
+                                                    </form>
+                                        </div>
+                                        
+
                                         </div>
 
-									
+								  <div class="text-center" id="totalShaft" ></div>
+                                    <div class="text-center" id="price"></div>
 
 								</fieldset>
-
-								<div class="row">
+                                
+                                
+                                
+                                <div class="row">
 									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND QUOTE</button>
+										<button id="sendQuote" type="submit" class="text-center" class="btn btn-primary"><i class="fa fa-check"></i> SEND QUOTE</button>
 									</div>
+
 								</div>
+                            
 							</form>
 
-						</div>
+						
 			<!-- / -->
 
 
@@ -574,7 +638,7 @@
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-
+        <script src="assets/js/script.soumission.js"></script>
 		<script src="assets/js/scripts.js"></script>
 		
 		<!-- STYLESWITCHER - REMOVE -->

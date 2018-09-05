@@ -254,7 +254,6 @@
 
 
 
-
 /** 00. Slider Full Height
  **************************************************************** **/
 	function _slider_full() {
@@ -352,6 +351,16 @@
 			return;
 
 		});
+
+        
+        //--- commercial 
+        function totalshatf() {
+    
+    var numShaft = document.getElementById("shaftCommercial").value;
+    document.getElementById("totalShaft").innerHTML = "Total of shaft needed is " + numShaft
+    
+    
+            }
 
 
 		// Srearch
