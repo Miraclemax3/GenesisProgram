@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Smarty - Multipurpose + Admin</title>
+		<title>Rockets Elevators Quote</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
@@ -366,6 +366,13 @@
 								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
 							</div><!-- /Alert Mandatory -->
+                
+                          <!-- alert 24 hours in a day --->
+                                <div id="alert_failed" class="alert alert-danger mb-30">
+                                    <button type="button" class="close" date-dismiss="alert" aria-hidden="true">&times;</button>
+                                    <strong>There is only 24 hours in a day!!</strong>
+                                </div>
+                              
 
 
 							<form action="php/contact.php" method="post" enctype="multipart/form-data">
@@ -379,16 +386,16 @@
                                 	<div class="col-md-12 mix residential">
                                     
                                         <div class="row">
-                                        <div class="col-md-3" oninput="shaftRes()">
+                                        <div class="col-md-4" oninput="shaftRes()">
 												<label for="contact:name">Number of appartments *</label>
 												<input required type="number" value="" class="form-control" name="" id="appartmentResidential">
                                     </div>
 											
-                                           <div class="col-md-3" oninput="shaftRes()">
-												<label for="contact:name">Number of floors *</label>
+                                           <div class="col-md-4" oninput="shaftRes()">
+												<label for="contat:name">Number of floors *</label>
 												<input required type="number" value="" class="form-control" name="" id="floorResidential">
 											</div>
-											<div class="col-md-3 ">
+											<div class="col-md-4">
 												<label for="contact:email">Number of basements *</label>
 												<input required type="number" value="" class="form-control" name="" id="basementResidential">
 											</div>
@@ -518,9 +525,9 @@
 												<input required type="number" value="" class="form-control" name="" id="occupantsHybrid">
 											</div>
                                 	
-                                            <div class="col-md-3 mix hybrid">
+                                            <div class="col-md-3 mix hybrid" oninput="shaftHybrid()">
 												<label for="contact:subject">Business hours (24h Max) *</label>
-												<input required type="number" value="" class="form-control" name="" id="businessHoursHybrid">
+												<input required type="number"  value="" class="form-control" name="" id="businessHoursHybrid" min="1" max="24">
 											</div>
                                                 
                                                 </div>
@@ -543,7 +550,7 @@
                                 
                                 
                                 
-                                <div class="row">
+                                <div class="text-center">
 									<div class="col-md-12">
 										<button id="sendQuote" type="submit" class="text-center" class="btn btn-primary"><i class="fa fa-check"></i> SEND QUOTE</button>
 									</div>

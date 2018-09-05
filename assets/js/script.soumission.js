@@ -125,6 +125,8 @@ function corpTotal(quotient) {
 
 
 function calculeQuoteHybrid(){
+
+    var numHours = Number(document.getElementById("businessHoursHybrid").value);    
     var numFloor = Number(document.getElementById("floorHybrid").value);
     var numOccup = Number(document.getElementById("occupantsHybrid").value);
     var numBasee = Number(document.getElementById("basementHybrid").value);
@@ -132,12 +134,19 @@ function calculeQuoteHybrid(){
     var answer5= Math.ceil((numFloor + numBasee) / 20);
     var answer6= Math.ceil(answer4 / answer5);
     return answer6*answer5;
+    
 
 }
 
 function shaftHybrid(){
+    var numHours = Number(document.getElementById("businessHoursHybrid").value);    
+    if ( numHours > 24 ) {
+        alert("There is only 24 hours in a day");
+    }else {
+
     var quoteHybrid = calculeQuoteHybrid();
     document.getElementById("totalShaft").innerHTML = "Total elevators needed is " + Math.ceil(calculeQuoteHybrid());
+    }
 }
 
 /// Total Price
@@ -146,7 +155,7 @@ function hybridStandard() {
 }
 
 function hybridPremium() {
-   hyrbidTotal(premium);
+   hybridTotal(premium);
 }
 
 function hybridExcelium() {
