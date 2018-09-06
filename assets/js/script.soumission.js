@@ -80,7 +80,8 @@ function commercialShaft() {
     document.getElementById("totalShaft").innerHTML = "Total of elevators needed is " + Math.ceil(numShaft);
         
     }
-    
+
+
     
 }
 function comStandard() {
