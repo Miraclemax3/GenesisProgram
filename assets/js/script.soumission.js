@@ -33,8 +33,20 @@ function calculeTotalResShafts() {
 }
 
 function shaftRes() {
+        var appRes = Number(document.getElementById("appartmentResidential").value);    
+    if ( appRes < 0 ) {
+        alert("You can`t have a negative number of appartment!");
+    }else{
+        var floorRes = Number(document.getElementById("floorResidential").value);    
+    if ( floorRes < 0 ) {
+        alert("You can`t have a negative number of floor!");   
+        
+    }else{
+    
    var quoteRes = calculeQuoteRes();
    document.getElementById("totalShaft").innerHTML = "Total of elevators needed is " + Math.ceil(calculeTotalResShafts());
+}
+}
 }
 
 /// Total Price
@@ -52,16 +64,22 @@ function resExcelium() {
 
 
 function resTotal(quotient) {
-   var priceResQuality = calculeTotalResShafts() * quotient;
+   var priceResQuality = Math.ceil(calculeTotalResShafts()) * quotient;
    document.getElementById('price').innerHTML = "Total price is $ " + Math.ceil(priceResQuality);
 }
 
 /// commercial
 
 function commercialShaft() {
+        var numShaft = Number(document.getElementById("shaftCommercial").value);    
+    if ( numShaft < 0 ) {
+        alert("You can`t have a negative number of elevators!");
+    }else{
     
     var numShaft = document.getElementById("shaftCommercial").value;
     document.getElementById("totalShaft").innerHTML = "Total of elevators needed is " + Math.ceil(numShaft);
+        
+    }
     
     
 }
@@ -95,9 +113,26 @@ function calculeQuoteCorp(){
     return answer3*answer2;
 }
 function shaftCorp(){
+     var numOcc = Number(document.getElementById("occupantsCorporate").value);    
+        if ( numOcc < 0 ) {
+        alert("You can`t have a negative number of occupant!");
+        }else{
+     var numFl = Number(document.getElementById("floorCorporate").value);    
+        if ( numFl < 0 ) {
+        alert("You can`t have a negative number of floor!");   
+        
+        }else{
+    var numBas = Number(document.getElementById("basementCorporate").value);    
+        if ( numBas < 0 ) {
+        alert("You can`t have a negative number of basement!");   
+        
+        }else{
+
     var quoteCorporate = calculeQuoteCorp();
     document.getElementById("totalShaft").innerHTML = "Total elevators needed is " + Math.ceil(calculeQuoteCorp());
-        
+}
+}
+}
 }
 /// Total Price
 function corpStandard() {
@@ -139,15 +174,36 @@ function calculeQuoteHybrid(){
 }
 
 function shaftHybrid(){
+    var numFloor = Number(document.getElementById("floorHybrid").value);    
+        if ( numFloor < 0 ) {
+        alert("You can`t have a negative number of floor!");
+        }else{
+     var numOccup = Number(document.getElementById("occupantsHybrid").value);    
+        if ( numOccup < 0 ) {
+        alert("You can`t have a negative number of occupant!");   
+        
+        }else{
+    var numBasee = Number(document.getElementById("basementHybrid").value);    
+        if ( numBasee < 0 ) {
+        alert("You can`t have a negative number of basement!");   
+        
+        }else{
+
     var numHours = Number(document.getElementById("businessHoursHybrid").value);    
     if ( numHours > 24 ) {
-        alert("There is only 24 hours in a day");
-    }else {
+        alert("There is only 24 hours in a day!");
+    }else if (numHours <0) {
+        alert("There is no negative hour in a day!");
+    
 
     var quoteHybrid = calculeQuoteHybrid();
     document.getElementById("totalShaft").innerHTML = "Total elevators needed is " + Math.ceil(calculeQuoteHybrid());
     }
+        }
+        }
+        }
 }
+
 
 /// Total Price
 function hybridStandard() {

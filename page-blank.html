@@ -387,18 +387,18 @@
                                 	<div class="col-md-12 mix residential">
                                     
                                         <div class="row">
-                                        <div class="col-md-4" oninput="shaftRes()">
+                                        <div class="col-md-4" oninput="shaftRes()" onchange="resStandard(), resPremium(), resExcelium()">
 												<label for="contact:name">Number of appartments *</label>
-												<input required type="number" value="" class="form-control" name="" id="appartmentResidential">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="appartmentResidential" min="1">
                                     </div>
 											
-                                           <div class="col-md-4" oninput="shaftRes()">
+                                           <div class="col-md-4" oninput="shaftRes() " onchange="resStandard(), resPremium(), resExcelium()">
 												<label for="contat:name">Number of floors *</label>
-												<input required type="number" value="" class="form-control" name="" id="floorResidential">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="floorResidential" min="1">
 											</div>
 											<div class="col-md-4">
 												<label for="contact:email">Number of basements *</label>
-												<input required type="number" value="" class="form-control" name="" id="basementResidential">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="basementResidential" min="0">
 											</div>
                                         </div>
                                                    <form>
@@ -417,28 +417,28 @@
 									<div class="col-md-12 mix commercial">
                                         <div class="row">
 											<div class="col-md-3">
-												<label for="contact:subject">How many distinct stores *</label>
-												<input required type="number" value="" class="form-control" name="" id="storeCommercial">
+												<label for="contact:subject">How many distinct stores </label>
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="storeCommercial" min="0">
 											</div>
                                     
 											<div class="col-md-3">
-												<label for="contact:subject">How many floors *</label>
-												<input required type="number" value="" class="form-control" name="" id="floorCommercial">
+												<label for="contact:subject">How many floors </label>
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="floorCommercial" min="1">
 											</div>
                     				
 											<div class="col-md-3">
-												<label for="contact:subject">How many basements *</label>
-												<input required type="number" value="" class="form-control" name="" id="basementCommercial">
+												<label for="contact:subject">How many basements </label>
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="basementCommercial" min="0">
 											</div>
                                    
 											<div class="col-md-3">
-												<label for="contact:subject">How many parking spots available *</label>
-												<input required type="number" value="" class="form-control" name="" id="parkingCommercial">
+												<label for="contact:subject">How many parking spots available </label>
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="parkingCommercial" min="1">
 											</div>
                                 
-											<div class="col-md-3 " oninput="commercialShaft()" >
+											<div class="col-md-3 " oninput="commercialShaft()" onchange="comStandard(), comPremium(), comExcelium()">
 												<label for="shaftCommercial">How many elevators shafts to build *</label>
-												<input required type="number" value="" class="form-control" name="" id="shaftCommercial">
+												<input  type="number"  placeholder="Enter a number" value="" class="form-control" name="" id="shaftCommercial" min="0">
 											</div>
                                         </div>
                                                      <form>
@@ -457,30 +457,30 @@
                                             <div class="col-md-12 mix corporate">
                                                 <div class="row">
                                                 <div class="col-md-3">
-												<label for="contact:subject">How many renting business *</label>
-												<input required type="number" value="" class="form-control" name="" id="businessCorporate">
+												<label for="contact:subject">How many renting business </label>
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="businessCorporate">
                                         </div>
                                                 
 											
                                   
-                                            <div class="col-md-3" oninput="shaftCorp()">
+                                            <div class="col-md-3" oninput="shaftCorp()" onchange="corpStandard(), corpPremium(), corpExcelium()">
 												<label for="contact:subject">How many floors *</label>
-												<input required type="number" value="" class="form-control" name="" id="floorCorporate">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="floorCorporate" min="1">
 											</div>
                             		
-                                            <div class="col-md-3" oninput="shaftCorp()">
+                                            <div class="col-md-3" oninput="shaftCorp() " onchange="corpStandard(), corpPremium(), corpExcelium()">
 												<label for="contact:subject">How many basements *</label>
-												<input required type="number" value="" class="form-control" name="" id="basementCorporate">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="basementCorporate" min="0">
 											</div>
                                    
                                             <div class="col-md-3">
-												<label for="contact:subject">How many parking spots available *</label>
-												<input required type="number" value="" class="form-control" name="" id="parkingCorporate">
+												<label for="contact:subject">How many parking spots available </label>
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="parkingCorporate">
 											</div>
                                 	
-                                            <div class="col-md-3" oninput="shaftCorp()">
+                                            <div class="col-md-3" oninput="shaftCorp()" onchange="corpStandard(), corpPremium(), corpExcelium()">
 												<label for="contact:subject">how many occupants maximum per floor*</label>
-												<input required type="number" value="" class="form-control" name="" id="occupantsCorporate">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="occupantsCorporate" min="1">
 											</div>
                                                 </div>
                                                     <form>
@@ -501,38 +501,39 @@
                                             <div class="col-md-12 mix hybrid">
                                                 <div class="row">
                                                 <div class="col-md-3">
-												<label for="contact:subject">How many distinct business *</label>
-												<input required type="number" value="" class="form-control" name="" id="businessHybrid">
+                                                    
+												<label for="contact:subject">How many distinct business </label>
+												<input type="number" onfocus="this.value=''"  placeholder="Enter a number" value="" class="form-control" name="" id="businessHybrid">
                                                     </div>
 											
 									
-                                            <div class="col-md-3  mix hybrid" oninput="shaftHybrid()">
+                                            <div class="col-md-3  mix hybrid" oninput="shaftHybrid()" onchange="hybridStandard(), hybridPremium(), hybridExcelium()">
 												<label for="contact:subject">How many floors *</label>
-												<input required type="number" value="" class="form-control" name="" id="floorHybrid">
+												<input type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="floorHybrid" min="1">
 											</div>
                                        
-                                            <div class="col-md-3 mix hybrid" oninput="shaftHybrid()">
+                                            <div class="col-md-3 mix hybrid" oninput="shaftHybrid()" onchange="hybridStandard(), hybridPremium(), hybridExcelium()">
 												<label for="contact:subject">How many basements *</label>
-												<input required type="number" value="" class="form-control" name="" id="basementHybrid">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="basementHybrid" min="0">
 											</div>
                             		
                                             <div class="col-md-3  mix hybrid">
-												<label for="contact:subject">How many parking spots available *</label>
-												<input required type="number" value="" class="form-control" name="" id="parkingHybrid">
+												<label for="contact:subject">How many parking spots available </label>
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="parkingHybrid">
 											</div>
                                   
-                                            <div class="col-md-3  mix hybrid" oninput="shaftHybrid()">
+                                            <div class="col-md-3  mix hybrid" oninput="shaftHybrid()" onchange="hybridStandard(), hybridPremium(), hybridExcelium()">
 												<label for="contact:subject">How many occupants maximum per floor *</label>
-												<input required type="number" value="" class="form-control" name="" id="occupantsHybrid">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number" value="" class="form-control" name="" id="occupantsHybrid" min="1">
 											</div>
                                 	
                                             <div class="col-md-3 mix hybrid" oninput="shaftHybrid()">
 												<label for="contact:subject">Business hours (24h Max) *</label>
-												<input required type="number"  value="" class="form-control" name="" id="businessHoursHybrid" min="1" max="24">
+												<input  type="number" onfocus="this.value=''" placeholder="Enter a number"  value="" class="form-control" name="" id="businessHoursHybrid" min="1" max="24">
 											</div>
                                                 
                                                 </div>
-                                                   <form>
+                                                   <form>                                           
                                                     <input type="radio"  onclick="hybridStandard()" name="range" value="Standard" > Standard--> 7 565$<br>
                                                     
                                                     <input type="radio"  onclick="hybridPremium()" name="range" value="Premium"> Premium--> 12 345$<br>
@@ -544,19 +545,12 @@
 
                                         </div>
 
-								  <div class="text-center" id="totalShaft" ></div>
+								  <div class="text-center"  onfocus="this.value=''" id="totalShaft" ></div>
                                     <div class="text-center" id="price"></div>
 
 								</fieldset>
                                 
-                                
-                                
-                                <div class="text-center">
-									<div class="col-md-12">
-										<button id="sendQuote" type="submit" class="text-center" class="btn btn-primary"><i class="fa fa-check"></i> SEND QUOTE</button>
-									</div>
-
-								</div>
+                    
                             
 							</form>
 
