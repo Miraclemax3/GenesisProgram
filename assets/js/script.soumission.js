@@ -20,6 +20,7 @@ function calculeQuoteRes() {
    var appRes = document.getElementById("appartmentResidential").value;
    var floorRes = document.getElementById("floorResidential").value;
    return (appRes / floorRes) / 6;
+    
 }
 
 function calculeTotalResShafts() {
@@ -34,20 +35,19 @@ function calculeTotalResShafts() {
 
 function shaftRes() {
         var appRes = Number(document.getElementById("appartmentResidential").value);    
-    if ( appRes < 0 ) {
+    if ( appRes <0 ) {
         alert("You can`t have a negative number of appartment!");
     }else{
         var floorRes = Number(document.getElementById("floorResidential").value);    
-    if ( floorRes < 0 ) {
-        alert("You can`t have a negative number of floor!");   
-        
+    if ( floorRes <0 ) {
+        alert("You can`t have a negative number of floor!"); 
     }else{
-    
    var quoteRes = calculeQuoteRes();
    document.getElementById("totalShaft").innerHTML = "Total of elevators needed is " + Math.ceil(calculeTotalResShafts());
+    }
 }
 }
-}
+
 
 /// Total Price
 function resStandard() {
